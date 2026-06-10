@@ -28,16 +28,20 @@ deno add @prodbysolivan/result
 ```typescript
 import { failure, isSuccess, Result, success } from "@prodbysolivan/result";
 
+// Function returning a Result: success containing the quotient, or failure containing an error message
 function divide(a: number, b: number): Result<number, string> {
-  if (b === 0) return failure("Cannot divide by zero");
-  return success(a / b);
+  if (b === 0) return failure("Cannot divide by zero"); // Return a failure state
+  return success(a / b);                               // Return a success state wrapping the value
 }
 
 const result = divide(10, 0);
 
+// Check if the operation was successful before accessing the value
 if (isSuccess(result)) {
+  // Safe to access the result value
   console.log(`Result: ${result.value}`);
 } else {
+  // Handle the error case safely
   console.error(`Error: ${result.error}`);
 }
 ```
