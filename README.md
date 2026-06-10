@@ -24,6 +24,8 @@ deno add @prodbysolivan/result
 ```
 
 ### Quick Usage
+Import the functions into your project:
+
 
 ```typescript
 import { failure, isSuccess, Result, success } from "@prodbysolivan/result";
