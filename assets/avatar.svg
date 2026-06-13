@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="Gradient" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" style="stop-color:#FF9800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF9800;stop-opacity:1" />
+    </linearGradient>
+    <filter id="alpha-to-white">
+      <feColorMatrix in="SourceGraphic" type="matrix"
+                     values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.8 0"/>
+    </filter>
+    <g id="child-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" height="16px" width="16px"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM17.4571 9.45711L11 15.9142L6.79289 11.7071L8.20711 10.2929L11 13.0858L16.0429 8.04289L17.4571 9.45711Z" /></svg></g>
+  </defs>
+  <rect
+      width="256"
+      height="256"
+      fill="url(#Gradient)"
+      ry="128"
+      x="0"
+      y="0" />
+  <use xlink:href="#child-svg" filter="url(#alpha-to-white)"
+       transform="matrix(8,0,0,8,64,64)" />
+</svg>
